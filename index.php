@@ -10,13 +10,16 @@
 
   <div id="app">
         <div class="container">
-            {{AllTasks}}
+            
+        <ul v-for="task in allTasks" >
+            <li> {{task.testo}} </li>
+        </ul>
         </div>
     </div>
 
 
-   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.6/axios.min.js" integrity="sha512-06NZg89vaTNvnFgFTqi/dJKFadQ6FIglD6Yg1HHWAUtVFFoXli9BZL4q4EO1UTKpOfCfW5ws2Z6gw49Swsilsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src='script.js'></script>
+    <script src='main.js'></script>
 </body>
 </html>

@@ -1,26 +1,27 @@
 <?php
-$tasks:[
+$tasks=[
     [
-        'testo'=>'Fare la Spesa'
-        'condition'=>'false'
+        'testo'=>'Fare la Spesa',
+        'condition'=>'true',
     ],
     [
-        'testo'=>'Andare dal Medico'
+        'testo'=>'Andare dal Medico',
         'condition'=>'true'
     ],
     [
-        'testo'=>'Comprare Le Sigarette'
+        'testo'=>'Comprare Le Sigarette',
         'condition'=>'true'
     ],
     [
-        'testo'=>'Fare Ricarica'
+        'testo'=>'Fare Ricarica',
         'condition'=>'true'
     ],
     [
-        'testo'=>'Annaffiare Piante'
+        'testo'=>'Annaffiare Piante',
         'condition'=>'true'
     ]
     ];
 
-    header('Content-type: application/json');
+    header('Content-Type: application/json');
     echo json_encode($tasks);
+    ?>

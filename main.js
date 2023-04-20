@@ -11,7 +11,7 @@ createApp({
         readTask() {
             axios.get('server.php')
                 .then(response => {
-                    this.allTasks = response.data;
+                    this.allTasks = response.data
                 })
         },
     },
