@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoList</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
 
   <div id="app">
-        <div class="container">
-            
-        <ul v-for="task in allTasks" >
-            <li> {{task.testo}} </li>
-        </ul>
+        <div class="container mt-5">
+                <ul class="list-group" v-for="(task,i) in allTasks" :key="i">
+                        <li class="list-group-item"> {{task.testo}}</li>       
+                </ul>
+                <input class="form-control mt-5" type="text" placeholder="Inserisci Task" aria-label="default input example" v-model="newTask">
+                <button class="btn btn-light mt-3" @click="addTask">Add Task</button>
+
         </div>
     </div>
 

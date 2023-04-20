@@ -22,6 +22,17 @@ $tasks=[
     ]
     ];
 
+   
+
+    if (isset ($_POST['task'])){
+        $tasks[]=[
+            'testo'=> $_POST['task'],
+            'condition'=> 'true'
+        ];
+
+    }
+
     header('Content-Type: application/json');
     echo json_encode($tasks);
+
     ?>
